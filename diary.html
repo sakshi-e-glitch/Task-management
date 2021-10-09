@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/b862bb0d81.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="diary.css">
+
+
+    <title>My Diary</title>
+</head>
+<body onload="reloadTaskCard()">
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TO-DO !!</a>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="diary.html">My Diary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="relax.html">Relax</a>
+              </li>
+            </ul>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Add today's diary entry
+              </button>
+           
+          </div>
+        </div>
+      </nav>
+
+      <h1>One Line a Day....</h1>
+      <p>Add your memories, be it failures or achivements,  in this section... And don't forget to cherish every moment of your life...</p>
+
+     
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">So, how was your day?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="form">
+            <div class="mb-3">
+                <label for="diarydate" class="col-form-label">Today's Date:</label>
+                <input type="date" name="diarydate" id="diarydate">
+                <br>
+                <label for="message-text" class="col-form-label">Diary Entry:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"  onclick="resetForm()">Reset</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="newEntry()">Save</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <div id="taskContentsrow" class="row">
+    <!-- <section>
+      <div class="card text-center">
+        <div class="card-header">
+          
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <button type="button" class="btn btn-primary" onclick="deleteTask()">Delete Memory</button>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
+    </div>
+    </section> -->
+  </main>
+
+
+
+
+  <footer>
+    <div class="foot">
+      <div class="socials">
+        <a href="#"><img id="soc1" src="instagram-svgrepo-com.svg" alt=""></a>
+        <a href="#"><img id="soc2"  src="linkedin-svgrepo-com.svg" alt=""></a>
+        <a href="#"><img id="soc3"  src="github-svgrepo-com.svg" alt=""></a>
+        <a href="#"><img id="soc4"  src="twitter-svgrepo-com.svg" alt=""></a>
+      </div>
+      <div class="copyright">
+        <p>@copyright 2021 Sakshi Pandey | All Rights Reserved </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+    <script src="diary.js"></script>
+    
+</body>
+</html>

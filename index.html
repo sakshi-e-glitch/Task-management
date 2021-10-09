@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/b862bb0d81.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="index.css">
+
+  <title>TO DO</title>
+</head>
+
+<body onload="reloadTaskCard()">
+  
+
+
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TO-DO !!</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="diary.html">My Diary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="relax.html">Relax</a>
+          </li>
+        </ul>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  <i class="fas fa-plus"></i> ADD NEW
+</button>
+    </div>
+  </div>
+</div>
+
+
+      
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Task Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" id="form">
+          <div class="mb-3">
+              <label for="deadline" class="col-form-label">Deadline: </label>
+              <input type="date" name="deadline" id="deadline">
+               <br>
+              <label for="task-desc" class="col-form-label">Task: </label>
+              <textarea class="form-control" id="task-desc" placeholder="Task desc..."></textarea>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="newTask()">Save</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+ 
+  <div class="car-main">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="assets\girl_new.gif" class="d-block w-100" alt="..." >
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="carousel_5.gif" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="assets\girl.gif" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+    <div class="idea">
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">About the Website</button>
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasTopLabel">...</h5>
+          <button type="button" class="btn btn-close text-reset btn-primary" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="main-container">
+            <div class="main-body">
+                <div class="top">
+                 <h1>Easily <br>
+                    Manage Your <br>
+                    Daily Tasks</h1>
+                </div>   
+                
+                <div class="middle">
+                    <p>Overwhelmed by your daily tasks? <br> 
+                    Get them under control with todolist! <br></p>
+                </div>
+    
+                <div class="bottom">
+                    <!-- <a href="todo.html">...Start your journey...<i class="fas fa-forward" > </i>  </a> -->
+                    <a class="btn btn-primarytext-reset btn-primary" data-bs-dismiss="offcanvas" aria-label="Close" href="todo.html" role="button">Start your journey...</a>
+                </div>
+    
+            </div>
+            <div class="image">
+                <img src="assets\5353134.jpg" alt="">
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  <div class="profile">
+
+  </div>
+
+  
+    <div class="container">
+    <!-- for image -->
+      <div class="left">
+      <img id="display" src="assets\boy_3.gif" alt="">
+      </div>
+    
+
+    <div class="right">
+      <div class="row">
+      <ul class="list-group posi" tabindex="-4" id="taskContentsrow" >
+        <!-- <li class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+          First checkbox
+        </li>
+        <li class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+          Fifth checkbox
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  </div>
+
+  </div>
+
+
+
+
+  <footer>
+    <div class="foot">
+      <div class="socials">
+        <a href="#"><img id="soc1" src="instagram-svgrepo-com.svg" alt=""></a>
+        <a href="#"><img id="soc2"  src="linkedin-svgrepo-com.svg" alt=""></a>
+        <a href="#"><img id="soc3"  src="github-svgrepo-com.svg" alt=""></a>
+        <a href="#"><img id="soc4"  src="twitter-svgrepo-com.svg" alt=""></a>
+      </div>
+      <div class="copyright">
+        <p>@copyright 2021 Sakshi Pandey | All Rights Reserved </p>
+      </div>
+    </div>
+  </footer>
+
+ 
+
+
+
+
+  <!-- bootstrap -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

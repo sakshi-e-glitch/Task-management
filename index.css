@@ -1,0 +1,299 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Yaldevi', sans-serif;
+}
+
+body{
+    background: url(black.jpg);
+    height: 100vh;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+#carouselExampleIndicators{
+  height: 400px;
+  width: 60vw;
+  padding: 0px auto ;
+
+}
+
+
+ .car-main{
+  /* background-color: rgb(33,37,41); */
+  background-color: black;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} 
+
+.carousel-item img{
+  width: 80%;
+  height: 400px;
+}
+
+.navbar{
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.navbar button{
+    margin: 0px 10px;
+}
+
+.main{
+    display: flex;
+}
+
+.container{
+  /* width: 100vw; */
+  height: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left button{
+  width: 50%;
+  margin: 10px 0;
+}
+
+.right{
+  width: 50%;
+}
+
+.offcanvas{
+  background-color: black;
+  color: aliceblue;
+}
+
+.offcanvas .img_border img{
+  width: 80%;
+  margin: 5px auto;
+}
+
+.offcanvas .img_border img:hover{
+  cursor: pointer;
+}
+
+ 
+/* 
+  #overlay_personal .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  } */
+
+li.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#taskContentsrow li {
+  background-color: rgba(0, 0, 0, 0.253);
+  color: #f1f1f1;
+  border: 1px  solid rgba(255, 255, 255, 0.192);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+ /* ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+} */
+
+#taskContentsrow{
+  padding: 0 5vh;
+  height: 65vh;
+  overflow-y: scroll;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+}
+
+
+footer{
+  background: url(back_4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100vw; */
+}
+
+.foot{
+  height: 90%;
+  width: 90%;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.479);
+  backdrop-filter: blur(0.2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #f1f1f1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+footer img{
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+footer #soc1:hover{
+    background-image: linear-gradient(red, yellow);
+    transform:  translateY(-10px);
+
+}
+footer #soc2:hover{
+  background-image: linear-gradient(rgb(0, 81, 255), rgb(153, 199, 238));
+  transform:  translateY(-10px);
+
+}
+footer #soc3:hover{
+  transform:  translateY(-10px);
+
+}
+footer #soc4:hover{
+  background-image: linear-gradient(rgb(0, 81, 255), rgb(153, 199, 238));
+  transform:  translateY(-10px);
+
+}
+
+
+
+
+
+
+
+
+
+.idea{
+  background-color: black;
+  text-align: center;
+}
+
+.offcanvas{
+  height: 60vh;
+}
+
+.offcanvas button {
+ 
+  background-color: white;
+ 
+}
+
+.main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+ .main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.offcanvas .main-container .image img{
+  width: 30vw;
+}
+ 
+
+
+
+
+@media screen and (max-width:1100px) {
+  #taskContentsrow{
+    padding: 0 0;
+  }
+  .container{
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .left{
+  width:80vw ;
+  height: 40vh;
+  align-items: center;
+  margin: 10px 0;
+  }
+
+  .left img{
+    width: 80%;
+    height: 100%;
+  }
+  .right{
+    height: 70vh;
+    width: 80%;
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width:600px){
+  .car-main{
+    height: 70vh;
+  }
+  .carousel-item img{
+    width: 90vw;
+    height: 50vh;
+  }
+  #carouselExampleIndicators{
+    /* height: 400px; */
+    width: 100vw;
+    padding: 0px auto ;
+  
+  }
+  .left button{
+    width: 60%;
+  }
+  .offcanvas{
+    height: 100vh;
+  }
+  .main-container{
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
+  }
+
+  .offcanvas .main-container .image img{
+    width: 60vw;
+  }
+
+  footer p{
+    font-size: 0.8rem;
+    font-weight: bolder;
+  }
+  
+} 
+
+@media screen and (max-width:350px){
+  .left button{
+    width: 80%;
+  }
+  .left img{
+    width: 100%;
+    height: 100%;
+  }
+  .foot{
+    width: 100%;
+  }
+}
