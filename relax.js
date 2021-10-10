@@ -1,3 +1,4 @@
+
 let allMusic = [
   {
       name: "And So It Begins",
@@ -96,7 +97,8 @@ function loadMusic(indexNumb){
 //play music function
 function playMusic(){
     card.classList.add("paused");
-    // playPauseBtn.querySelector("i").innerText = "pause";
+    playPauseBtn.classList.remove('fa-play-circle')
+    playPauseBtn.classList.add('fa-pause-circle')
     mainAudio.play();
     // if(currentTime === audioDuration)
     // nextMusic()
@@ -104,7 +106,8 @@ function playMusic(){
   //pause music function
   function pauseMusic(){
     card.classList.remove("paused");
-    // playPauseBtn.querySelector("i").innerText = "play_arrow";
+    playPauseBtn.classList.remove('fa-pause-circle')
+    playPauseBtn.classList.add('fa-play-circle')
     mainAudio.pause();
   }
 
@@ -208,3 +211,32 @@ mainAudio.addEventListener("ended", () => {
 
 
 
+
+
+window.onload = () => {
+  const anchors = document.querySelectorAll('a');
+  const transition_el = document.querySelector('.transition');
+
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 500);
+
+  for (let i = 0; i < anchors.length; i++) {
+    const anchor = anchors[i];
+
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      let target = e.target.href;
+
+      console.log(transition_el);
+
+      transition_el.classList.add('is-active');
+
+      console.log(transition_el);
+
+      setInterval(() => {
+        window.location.href = target;
+      }, 500);
+    })
+  }
+}

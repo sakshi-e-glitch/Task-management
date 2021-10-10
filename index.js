@@ -1,6 +1,4 @@
-
-
-      let myTasks = [];
+  let myTasks = [];
   let taskContents = document.getElementById('taskContentsrow');
 
   const newTask = () => {
@@ -14,7 +12,7 @@
 
     myTasks.push(newTaskDetails);
     saveToLocalStorage()
-}    
+};    
 
 const generateTask = ({id,desc,deadline}) => {
   return(
@@ -35,12 +33,12 @@ const generateTask = ({id,desc,deadline}) => {
   </li>`
           )
 
-}
+};
 
 
 const saveToLocalStorage = () => {
   localStorage.setItem("taskList", JSON.stringify({tasks: myTasks}))
-}
+};
 
 const reloadTaskCard = () => {
   const localStorageCopy = JSON.parse( localStorage.getItem("taskList"))
@@ -51,15 +49,19 @@ const reloadTaskCard = () => {
   myTasks.map((cardData) => {
       taskContents.insertAdjacentHTML('beforeend',generateTask(cardData))
   })
-}
+};
 
 
 const deleteTask = (e) => {
   const targetID = e.getAttribute("name")
   myTasks = myTasks.filter((entryData) => entryData.id!=targetID)
-  saveToLocalStorage();
-  window.location.reload();
- }
+  e.parentNode.classList.add("delete-trans")
+  setTimeout( () => {
+    saveToLocalStorage();
+    window.location.reload();
+  },500)
+  
+ };
 
 
 
@@ -134,4 +136,40 @@ const saveEditedTask = (e) => {
   window.location.reload();
   reloadTaskCard()
 };
+
+
+
+
+
+
+window.onload = (() => {
+  const anchors = document.querySelectorAll('nav a');
+  const transition_el = document.querySelector('.transition');
+
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 500);
+
+  for (let i = 0; i < anchors.length; i++) {
+    const anchor = anchors[i];
+
+    anchor.addEventListener('click', e => {
+      // e.preventDefault();
+      let target = e.target.href;
+
+      console.log(transition_el);
+
+      transition_el.classList.add('is-active');
+
+      console.log(transition_el);
+
+      setInterval(() => {
+        window.location.href = target;
+      }, 500);
+    })
+  }
+
+  // window.location.reload();
+  reloadTaskCard()
+}) ;
 
